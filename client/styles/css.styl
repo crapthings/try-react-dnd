@@ -1,0 +1,50 @@
+$spacing = 16px
+
+*
+  box-sizing border-box
+
+html
+body
+  margin 0
+  padding @margin
+  width 100%
+  height @width
+
+
+.mglr
+  margin-left $spacing
+  margin-right @margin-left
+
+.mglr-sm
+  margin-left ($spacing / 2) px
+  margin-right @margin-left
+
+.mgb
+  margin-bottom $spacing
+
+.padded
+  padding $spacing
+
+.color-white
+  color white
+
+.inline-block
+  display inline-block
+
+.no-wrap
+  white-space nowrap
+
+.float-left
+  float left
+
+.vertical-align-top
+  vertical-align top
+
+.ui-deck
+  width 300px
+  min-height 100vh
+  white-space normal
+
+.ui-card
+  background-color white
+  border-radius ($spacing / 4) px
