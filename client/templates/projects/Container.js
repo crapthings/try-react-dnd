@@ -6,16 +6,6 @@ import HTML5Backend from 'react-dnd-html5-backend'
 
 import randomColor from 'randomcolor'
 
-const deckStyle = () => ({
-  backgroundColor: randomColor({
-    luminosity: 'dark',
-  }),
-})
-
-const style = {
-  width: 400
-}
-
 @DragDropContext(HTML5Backend)
 export default class Container extends Component {
   constructor(props) {
@@ -50,8 +40,8 @@ export default class Container extends Component {
     const { deck } = this.props
 
     return (
-      <div className={this.props.className} style={deckStyle()}>
-        <div className='padded color-white'>{deck}</div>
+      <div className={this.props.className} style={{ backgroundColor: deck.color }}>
+        <div className='padded color-white'>{deck.name}</div>
         {cards.map((card, i) => {
           return (
             <Card key={card.id}

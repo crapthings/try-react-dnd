@@ -88,7 +88,6 @@ export default class Card extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { text, isDragging, connectDragSource, connectDropTarget } = this.props
     const opacity = isDragging ? 0 : 1
 
